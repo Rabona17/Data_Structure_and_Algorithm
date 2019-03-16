@@ -6,4 +6,4 @@ Since Python, unlike Java or other languages, doesn't have built-in `LinkedList`
 * For `insert_at` and `remove_at`, the complexity is O(n).
 ## CircularLinkedList
 * The key is to find the entry to the circular and the length of the circle.
-* More on `CircularLinkedList`, `DoublyLinkedList` will be introduced. 
+* More on `CircularLinkedList`, `DoublelyLinkedList` will be introduced. 
