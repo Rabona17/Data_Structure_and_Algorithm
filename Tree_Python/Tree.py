@@ -13,7 +13,7 @@ class Tree:
         return not self.branches
         
 
-class BSTree:
+class BSTree(Tree):
     empty = ()
     def __init__( self , label , left = empty, right = empty):
         self.label = label
