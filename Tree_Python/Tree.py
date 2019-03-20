@@ -11,6 +11,10 @@ class Tree:
             return 'Tree({0})'.format(repr(self.label))
     def is_leaf(self):
         return not self.branches
+    
+    def right_binarize(self):
+        """Construct a right-branching binary tree."""
+        return Tree(self.label, binarize_branches(self.branches))
         
 
 class BSTree(Tree):
@@ -24,3 +28,4 @@ class BSTree(Tree):
         if self . left == BSTree.empty and self.right == BSTree.empty:
             return True
         return False
+
