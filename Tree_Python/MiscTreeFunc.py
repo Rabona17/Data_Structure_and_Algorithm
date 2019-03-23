@@ -2,11 +2,11 @@ from Tree import *
 def map_tree(tree, func):
     """
     Map a function to every leaf of a tree
-    >>> t = Tree(2, (Tree(2), Tree(2, (Tree(2), Tree(2)))))
+    >>> t = Tree(1, [Tree(2), Tree(3, [Tree(4, [Tree(5)])]), Tree(6)])
     >>> map_tree(t, lambda x:x**-1)
-    Tree(0.5, (Tree(0.5), Tree(0.5, (Tree(0.5), Tree(0.5)))))
+    Tree(1.0, [Tree(0.5), Tree(0.3333333333333333, [Tree(0.25, [Tree(0.2)])]), Tree(0.16666666666666666)])
     >>> map_tree(t, lambda x:x**3)
-    Tree(8, (Tree(8), Tree(8, (Tree(8), Tree(8)))))
+    Tree(1, [Tree(8), Tree(27, [Tree(64, [Tree(125)])]), Tree(216)])
     """
     if tree.is_leaf():
         return Tree(func(tree.label))
@@ -15,7 +15,7 @@ def map_tree(tree, func):
         for branch in tree.branches[:]:            
             branch = map_tree(branch, func)
             new_branch.append(branch)
-        return Tree(func(tree.label), tuple(new_branch))
+        return Tree(func(tree.label), new_branch)
         
 def sum_labels(t):
     """Sum the labels of a Tree instance, which may be None."""
@@ -36,4 +36,11 @@ def virtice_match(tree, number):
         for branch in tree.branches:
             count += virtice_match(branch, number)
         return count
+    
+def tree_height(tree):
+    height = 1
+    if tree.is_leaf():
+        return height
+    else:
+        return height + max(tree_height(branch) for branch in tree.branches)
     
