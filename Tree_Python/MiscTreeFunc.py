@@ -1,3 +1,4 @@
+from Tree import *
 def map_tree(tree, func):
     """
     Map a function to every leaf of a tree
