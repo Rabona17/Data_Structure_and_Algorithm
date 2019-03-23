@@ -1,4 +1,4 @@
-from Tree.py import *
+from Tree import *
 
 #Example 1: Fibonacci
 def fib_tree(n):
