@@ -1,5 +1,5 @@
 class Tree:
-    def __init__(self, label, branches=()):
+    def __init__(self, label, branches=[]):
         self.label = label
         for branch in branches:
             assert isinstance(branch, Tree)
@@ -20,7 +20,7 @@ class BSTree(Tree):
         self.right = right
 
     def is_leaf ( self ):
-        if self . left == BSTree.empty and self.right == BSTree.empty:
+        if self.left == BSTree.empty and self.right == BSTree.empty:
             return True
         return False
 
