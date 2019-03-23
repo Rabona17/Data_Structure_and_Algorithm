@@ -112,13 +112,19 @@ class Queue:
         >>> q.num_elems
         2
         """
-        if self.is_full():
-            self.expand()
-        self.num_elems += 1
-        self.data[self.rear] = elem
-        self.rear += 1
-        if (self.rear == len(self.data)):
-            self.rear = 0
+        def enqueue_one(elem):
+            if self.is_full():
+                self.expand()
+            self.num_elems += 1
+            self.data[self.rear] = elem
+            self.rear += 1
+            if (self.rear == len(self.data)):
+                self.rear = 0
+        if not iter(elem):
+            enqueue_one(elem)
+        else:
+            for i in elem:
+                enqueue_one(i)
 
     def expand(self):
         """
