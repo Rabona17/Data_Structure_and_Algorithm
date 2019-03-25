@@ -67,3 +67,12 @@ def smallest_leaf(tree):
             leafs.append(smallest_leaf(branch))
         return min(leafs)
     
+def node_count(tree):
+    count = 1
+    if tree.is_leaf():
+        return count
+    else:
+        for branch in tree.branches:
+            count += node_count(branch)
+        return count
+    
