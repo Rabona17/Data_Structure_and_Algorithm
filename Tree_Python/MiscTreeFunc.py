@@ -44,3 +44,17 @@ def tree_height(tree):
     else:
         return height + max(tree_height(branch) for branch in tree.branches)
     
+def leaf_change(tree, old, new):
+    if tree.is_leaf():
+        if tree.label == old:
+            return Tree(new)
+        return tree
+    else:
+        new_branches = []
+        new_label = tree.label
+        if tree.label == old:
+            new_label = new
+        for branch in tree.branches:
+            new_branches.append(leaf_change(branch, old, new))
+        print(new_branches)
+        return Tree(new_label, new_branches)
