@@ -56,5 +56,14 @@ def leaf_change(tree, old, new):
             new_label = new
         for branch in tree.branches:
             new_branches.append(leaf_change(branch, old, new))
-        print(new_branches)
         return Tree(new_label, new_branches)
+
+def smallest_leaf(tree):
+    if tree.is_leaf():
+        return tree.label
+    else:
+        leafs = []
+        for branch in tree.branches:
+            leafs.append(smallest_leaf(branch))
+        return min(leafs)
+    
