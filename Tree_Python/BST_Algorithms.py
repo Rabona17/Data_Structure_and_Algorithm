@@ -2,6 +2,8 @@
 ##The Following algorithms are done by recursion##
 ##Implementation by stack and queues are coming ##
 ##################################################
+from Tree import *
+
 def PreOrder(bst):
   """
   Return the PreOrder Traversal of a bst
