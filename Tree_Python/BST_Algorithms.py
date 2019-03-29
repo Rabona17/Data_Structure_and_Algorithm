@@ -3,6 +3,7 @@
 ##Implementation by stack and queues are coming ##
 ##################################################
 from Tree import *
+from Stack_and_Queue.Queue import *
 
 def PreOrder(bst):
   """
@@ -49,3 +50,35 @@ def PostOrder(bst):
         traversal.extend([bst.label])            
         return traversal
       
+def PreOrder_Stack(bst):
+  """
+  Using stack for preorder DFT
+  """
+    stack = Stack()
+    traversal = []
+    stack.push(bst)
+    while stack.size!=0:
+        bst = stack.pop()
+        traversal.append(bst.label)
+        if bst.right != BSTree.empty:
+            stack.push(bst.right)
+        if bst.left != BSTree.empty:
+            stack.push(bst.left)
+    return traversal
+  
+def InOrder_Stack(bst):
+  """
+  Using stack for inorder DFT
+  """
+    stack = Stack()
+    traversal = []
+    while stack.size!=0 or bst:
+        if not bst:
+            bst=stack.pop()
+            traversal.append(bst.label)
+            bst=bst.right
+        else:
+            stack.push(bst)
+            bst=bst.left
+    return traversal
+  
