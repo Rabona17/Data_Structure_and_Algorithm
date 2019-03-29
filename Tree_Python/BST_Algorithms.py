@@ -50,6 +50,10 @@ def PostOrder(bst):
         traversal.extend([bst.label])            
         return traversal
       
+
+##############################################
+##The Following algorithms are done by stack##
+##############################################     
 def PreOrder_Stack(bst):
   """
   Using stack for preorder DFT
@@ -82,3 +86,32 @@ def InOrder_Stack(bst):
             bst=bst.left
     return traversal
   
+def search(bst, toFind):
+    if bst==[]:
+        return False
+    if bst.label==toFind:
+        return True
+    elif bst.is_leaf():
+        return bst.label==toFind
+    elif bst.left ==[]:
+        return search(bst.right, toFind)
+    elif bst.right ==[]:
+        return search(bst.left, toFind)
+    else:
+        return search(bst.left, toFind) or search(bst.right, toFind)
+
+def insert(bst, toInsert):
+    if search(bst, toInsert):
+        print('Already exists')
+    elif bst==[]:
+        print(1)
+        bst = BSTree(toInsert)
+        return bst
+    else:
+        if toInsert<bst.label:
+            print(4)
+            bst.right = insert(bst.right, toInsert)
+        else:
+            print(5)
+            bst.left = insert(bst.left, toInsert)
+        return bst
