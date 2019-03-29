@@ -6,5 +6,5 @@ And might add R.(If I really hate data analysis)
 * `Stack and Queue` in Python
 * `Circular Array` in Python 
 * `LinkedList` & `Circular LinkedList` in Python
-* `Tree` & `BST` in Python and the corrosponding traversing algorithm
+* `Tree` & `BST` in Python and the corrosponding traversing/seaching/inserting/deleting algorithm
 * A lot of `recursion`
