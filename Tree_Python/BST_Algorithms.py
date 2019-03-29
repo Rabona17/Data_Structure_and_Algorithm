@@ -104,14 +104,11 @@ def insert(bst, toInsert):
     if search(bst, toInsert):
         print('Already exists')
     elif bst==[]:
-        print(1)
         bst = BSTree(toInsert)
         return bst
     else:
-        if toInsert<bst.label:
-            print(4)
+        if toInsert>bst.label:
             bst.right = insert(bst.right, toInsert)
         else:
-            print(5)
             bst.left = insert(bst.left, toInsert)
         return bst
