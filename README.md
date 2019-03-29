@@ -8,3 +8,6 @@ And might add R.(If I really hate data analysis)
 * `LinkedList` & `Circular LinkedList` in Python
 * `Tree` & `BST` and the corrosponding traversing/seaching/inserting/deleting algorithm in Python
 * A lot of `recursion`
+## Next Step
+* Write algorithm in Java, C/C++ in a few months
+* Start my leetcode journey
