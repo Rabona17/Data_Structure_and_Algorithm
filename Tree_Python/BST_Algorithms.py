@@ -93,9 +93,9 @@ def search(bst, toFind):
         return True
     elif bst.is_leaf():
         return bst.label==toFind
-    elif bst.left ==[]:
+    elif bst.left ==BSTree.empty:
         return search(bst.right, toFind)
-    elif bst.right ==[]:
+    elif bst.right ==BSTree.empty:
         return search(bst.left, toFind)
     else:
         return search(bst.left, toFind) or search(bst.right, toFind)
@@ -103,7 +103,7 @@ def search(bst, toFind):
 def insert(bst, toInsert):
     if search(bst, toInsert):
         print('Already exists')
-    elif bst==[]:
+    elif bst==BSTree.empty:
         bst = BSTree(toInsert)
         return bst
     else:
@@ -112,3 +112,20 @@ def insert(bst, toInsert):
         else:
             bst.left = insert(bst.left, toInsert)
         return bst
+
+def delete(bst, toDelete):
+    if bst == BSTree.empty:
+        print('Nothing changed')
+    elif toDelete<bst.label:
+        bst.left = delete(bst.left, toDelete)
+    elif toDelete>bst.label:
+        bst.right = delete(bst.right, toDelete)
+    else:
+        if (bst.left == BSTree.empty):
+            return bst.right
+        elif (bst.right == BSTree.empty):
+            return bst.left
+        else:
+            bst.label = max(PreOrder(bst.left))
+            bst.left = delete(bst.left, bst.label)
+    return bst
