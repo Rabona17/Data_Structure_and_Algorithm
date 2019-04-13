@@ -146,12 +146,24 @@ class Queue:
         48
         """
         double_size = 2
-        self.rear = self.capacity
-        self.capacity *= double_size
+        
         new_arr = np.empty(self.capacity, dtype = object)
-        for i in np.arange(0, len(self.data)):
-            new_arr[i] = self.data[i]
+        for i in range(self.front, len(self.data)):
+            newArr[i] = self.data[i]
+            
+        self.rear = self.data.length
+        for i in range(0, front):
+            rear += 1
+            newArr[rear-1] = data[i]
+        
         self.data = new_arr
+        self.capacity *= double_size
+#         self.rear = self.capacity
+#         self.capacity *= double_size
+#         new_arr = np.empty(self.capacity, dtype = object)
+#         for i in np.arange(0, len(self.data)):
+#             new_arr[i] = self.data[i]
+#         self.data = new_arr
 
     def is_full(self):
         """
