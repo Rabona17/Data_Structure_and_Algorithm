@@ -149,12 +149,12 @@ class Queue:
         
         new_arr = np.empty(self.capacity, dtype = object)
         for i in range(self.front, len(self.data)):
-            newArr[i] = self.data[i]
+            new_arr[i] = self.data[i]
             
         self.rear = self.data.length
         for i in range(0, front):
             rear += 1
-            newArr[rear-1] = data[i]
+            new_arr[rear-1] = data[i]
         
         self.data = new_arr
         self.capacity *= double_size
