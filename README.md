@@ -7,7 +7,9 @@ And might add R.(If I really hate data analysis)
 * `Circular Array` in Python 
 * `LinkedList` & `Circular LinkedList` in Python
 * `Tree` & `BST` and the corrosponding traversing/seaching/inserting/deleting algorithm in Python
+* `Queue` using circular array in Java
 * A lot of `recursion`
 ## Next Step
+* `Stack` in C, `doubly linkedlist` in Java
 * Write algorithm in Java, C/C++ in a few months
 * Start my leetcode journey
