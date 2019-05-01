@@ -6,11 +6,10 @@ And might add R.(If I really hate data analysis)
 * `Stack and Queue` in Python
 * `Circular Array` in Python 
 * `LinkedList` & `Circular LinkedList` in Python
+* `Doubly LinkedList` in Java
 * `Tree` & `BST` and the corrosponding traversing/seaching/inserting/deleting algorithm in Python
 * `Queue` using circular array in Java
 * `Stack` in C
 * A lot of `recursion`
 ## Next Step
-* `Circular Linked_List` in C, `doubly linkedlist` in Java, `searching and sorting` algorithms in Java
-* Write algorithm in Java, C/C++ in a few months
-* Start my leetcode journey
+* `Circular Linked_List` in C, `searching and sorting` algorithms in Java, `Hashtable` in C++
