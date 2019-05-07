@@ -12,4 +12,4 @@ And might add R.(If I really hate data analysis)
 * `Stack` in C
 * A lot of `recursion`
 ## Next Step
-* `Circular Linked_List` in C, `searching and sorting` algorithms in Java, `Hashtable` in C++
+* `Circular Linked_List` in C, `searching and sorting` algorithms in Java, `Hashtable` in C++, `BST` in Java
