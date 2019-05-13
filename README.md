@@ -10,6 +10,7 @@ And might add R.(If I really hate data analysis)
 * `Tree` & `BST` and the corrosponding traversing/seaching/inserting/deleting algorithm in Python
 * `Queue` using circular array in Java
 * `Stack` in C
+* `Sorting algorithm` in Java
 * A lot of `recursion`
 ## Next Step
 * `Circular Linked_List` in C, `Hashtable` in C++, `BST` in Java and C++, `heap, heap_sort, priority queue` in Java
