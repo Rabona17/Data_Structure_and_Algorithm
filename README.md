@@ -13,4 +13,4 @@ And might add R.(If I really hate data analysis)
 * `Sorting algorithm` in Java
 * A lot of `recursion`
 ## Next Step
-* `Circular Linked_List` in C, `Hashtable` in C++, `BST` in Java and C++, `heap, heap_sort, priority queue` in Java
+* `Circular Linked_List` in C, `BST` in Java and C++, `heap, heap_sort, priority queue` in Java
