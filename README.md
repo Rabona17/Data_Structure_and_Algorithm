@@ -11,6 +11,7 @@ And might add R.(If I really hate data analysis)
 * `Queue` using circular array in Java
 * `Stack` in C
 * `Sorting algorithm` in Java
+* `HashTable` in C++
 * A lot of `recursion`
 ## Next Step
 * `Circular Linked_List` in C, `BST` in Java and C++, `heap, heap_sort, priority queue` in Java
