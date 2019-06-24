@@ -10,8 +10,10 @@ Implementation of data sturcture in Python, Java, C, C++
 * `Queue` using circular array in Java
 * `Stack` in C
 * `Sorting algorithm` in Java
+* `BST` in Java
+* `Huffman Coding Tree` in Java
 * `HashTable` in C++
 * `Balanced BST` in C++
-* A lot of `recursion`
+
 ## Next Step
 * `BFS`, `DFS`, `Dijstra`, `A*`, `BellmanFord`, `Kruskal` algorithms in Java
