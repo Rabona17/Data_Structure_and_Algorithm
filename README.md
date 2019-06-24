@@ -11,6 +11,7 @@ Implementation of data sturcture in Python, Java, C, C++
 * `Stack` in C
 * `Sorting algorithm` in Java
 * `HashTable` in C++
+* `Balanced BST` in C++
 * A lot of `recursion`
 ## Next Step
 * `Circular Linked_List` in C, `BST` in Java and C++, `heap, heap_sort, priority queue` in Java
