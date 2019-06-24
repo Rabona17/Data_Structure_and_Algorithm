@@ -14,4 +14,4 @@ Implementation of data sturcture in Python, Java, C, C++
 * `Balanced BST` in C++
 * A lot of `recursion`
 ## Next Step
-* `Circular Linked_List` in C, `BST` in Java and C++, `heap, heap_sort, priority queue` in Java
+* `BFS`, `DFS`, `Dijstra`, `A*`, `BellmanFord`, `Kruskal` algorithms in Java
