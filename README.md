@@ -6,7 +6,7 @@ Implementation of data sturcture in Python, Java, C, C++
 * `Circular Array` in Python 
 * `LinkedList` & `Circular LinkedList` in Python
 * `Doubly LinkedList` in Java
-* `Tree` & `BST` and the corrosponding traversing/seaching/inserting/deleting algorithm in Python
+* `Tree` & `BST` in Python
 * `Queue` using circular array in Java
 * `Stack` in C
 * `Sorting algorithm` in Java
