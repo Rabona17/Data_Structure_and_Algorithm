@@ -24,74 +24,62 @@ private int size;
 private LinkedList<String> storage[];
 private int longest;
 private DecimalFormat df = new DecimalFormat("#.##");
-/**
-	 * constructor
-	 * @param size the size of the initial table
-	 */
+
 public HashTable(int size) {
-this.size = size;
-		storage = new LinkedList[size];
-	}
-/**
-	 * Constuctor with 2 args
-	 * @param size the size of the table
-	 * @param fileName where to print the statistic of the table to
-	 */
+	this.size = size;
+	storage = new LinkedList[size];
+}
+
 public HashTable(int size, String fileName){
-this.size = size;
-this.statsFileName = fileName;
-		printStats = true;
+	this.size = size;
+	this.statsFileName = fileName;
+	printStats = true;
 // Set printStats to true and statsFileName to fileName
-		storage = new LinkedList[size];
-	}
-/**
-	 * Insert a string value to hashtable according to its hashfunction
-	 * @param value value to insert
-	 * @return 1 if successfully inset, 0 otherwise
-	 * @throws NullPointerException
-	 */
+	storage = new LinkedList[size];
+}
+
 public boolean insert(String value) {
 //if invalid parameter
-if(value==null){
-throw new NullPointerException();
-		}
-int hashNum = hashVal(value);
-//if not been store before
-if(storage[hashNum] == null){
-//create a new linkedlist
-			storage[hashNum] = new LinkedList<>();
-			storage[hashNum].add(value);
-			nelems++;
-//keeing track of the longest chain
-if(storage[hashNum].size()>longest){
-				longest = storage[hashNum].size();
+	if(value==null){
+	throw new NullPointerException();
 			}
-//if the element is larger than expected
-if((float)size*MAXMUM_NUMBER<=nelems){
-				rehash();
-			}
-return true;
-		}
+	int hashNum = hashVal(value);
+	//if not been store before
+	if(storage[hashNum] == null){
+	//create a new linkedlist
+				storage[hashNum] = new LinkedList<>();
+				storage[hashNum].add(value);
+				nelems++;
+	//keeing track of the longest chain
+	if(storage[hashNum].size()>longest){
+					longest = storage[hashNum].size();
+				}
+	//if the element is larger than expected
+	if((float)size*MAXMUM_NUMBER<=nelems){
+					rehash();
+				}
+	return true;
+	}
 //if not been stored before
-else if(!storage[hashNum].contains(value)){
-			collision++;
-			storage[hashNum].add(value);
-			nelems++;
-//keeing track of the longest chain
-if(storage[hashNum].size()>longest){
-				longest = storage[hashNum].size();
+	else if(!storage[hashNum].contains(value)){
+				collision++;
+				storage[hashNum].add(value);
+				nelems++;
+	//keeing track of the longest chain
+	if(storage[hashNum].size()>longest){
+					longest = storage[hashNum].size();
+				}
+	//System.out.println((float)size*MAXMUM_NUMBER);
+	//if the element is larger than expected
+	if((float)size*MAXMUM_NUMBER<nelems){
+					rehash();
+				}
+	return true;
 			}
-//System.out.println((float)size*MAXMUM_NUMBER);
-//if the element is larger than expected
-if((float)size*MAXMUM_NUMBER<nelems){
-				rehash();
+	//if that has been stored
+	else{
+	return false;
 			}
-return true;
-		}
-//if that has been stored
-else{
-return false;
-		}
 	}
 /**
 	 * delete an element in the hashtable
