@@ -14,6 +14,6 @@ Implementation of data sturcture in Python, Java, C, C++
 * `Huffman Coding Tree` in Java
 * `HashTable` in C++
 * `Balanced BST` in C++
-
+* `Hashtable and BloomFilter` in Java
 ## Next Step
 * `BFS`, `DFS`, `Dijstra`, `A*`, `BellmanFord`, `Kruskal` algorithms in Java
