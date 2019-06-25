@@ -15,5 +15,6 @@ Implementation of data sturcture in Python, Java, C, C++
 * `HashTable` in C++
 * `Balanced BST` in C++
 * `Hashtable and BloomFilter` in Java
+* `BFS`, `DFS`, `Dijstra`, `A*` in Java
 ## Next Step
-* `BFS`, `DFS`, `Dijstra`, `A*`, `BellmanFord`, `Kruskal` algorithms in Java
+* `Kruskal` in Java
