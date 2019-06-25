@@ -1,25 +1,6 @@
-/**
- * This is the file that contains a graph calss that includes several search
- * algorithms amd find the shortest path, including the bfs, dfs, dijkstra, and
- * a* algorithm. It has some
- * instance variables like a list of vertices, all edges, and result path
- * It also includes several helper methods
- * @Author Yuan Gao
- * @PID A15605474
- */
 import java.util.*;
 
 public class Graph {
-    /**
-     * This is the graph calss that includes several search
-     * algorithms amd find the shortest path, including the bfs, dfs, dijkstra,
-     * and
-     * a* algorithm. It has some
-     * instance variables like a list of vertices, all edges, and result path
-     * It also includes several helper methods
-     * @Author Yuan Gao
-     * @PID A15605474
-     */
     private ArrayList<Vertex> vertices;
 
     public ArrayList<Edge> getEdges() {
