@@ -178,15 +178,12 @@ return abs(hashInt % size);
 private void rehash() {
 		expand++;
 // if print is true, first print then rehash
-if(printStats){
-			printStatistics();
-		}
 //setting the instance variables
 		nelems = 0;
 		size*=DOUBLE;
-LinkedList<String> new_arr[] = new LinkedList[this.size];
-//store the old list
-LinkedList<String> old_arr[] = storage;
+		LinkedList<String> new_arr[] = new LinkedList[this.size];
+		//store the old list
+		LinkedList<String> old_arr[] = storage;
 		storage = new_arr;
 		collision=0;
 		longest = 0;
@@ -202,45 +199,5 @@ String value = (String) iter.next();
 			}
 		}
 	}
-/**
-	 * Print out the statistics of the table to the file.
-	 */
-private void printStatistics() {
-try {
-//open a file
-PrintWriter pw = new PrintWriter(new FileOutputStream(new
-File(statsFileName),true));
-//setting the variables
-int resize = expand;
-float load_factor = (float)nelems / size;
-int num_collision = collision;
-int longest_chain = longest;
-//print according to the variables
-			pw.println(resize+" resizes, load factor "+df.format(load_factor)
-+", "+num_collision+" collisions, "+longest_chain
-+" longest chain");
-			pw.close();
-		}
-//catch exception
-catch (IOException e) { // If the given file doesn’t exist
-System.out.println("File does't exist");
-		}
-	}
-public static void main(String[] args) {
-HashTable hs  = new HashTable(7, "test.txt");
-BufferedReader reader;
-try {
-			reader = new BufferedReader(new FileReader(
-"long.dict.txt"));
-String line = reader.readLine();
-while (line != null) {
-				hs.insert(line);
-// read next line
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+
 }
