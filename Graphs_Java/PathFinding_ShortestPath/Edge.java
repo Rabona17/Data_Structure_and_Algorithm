@@ -1,18 +1,4 @@
-/**
- * This file contains a edge class that has several attributes.
- * It has two vertices, representing source and target, and it
- * has its distance. It also provides getters and setters
- * @Author Yuan Gao
- * @PID A15605474
- */
 public class Edge {
-    /**
-     * This is class that has several attributes.
-     * It has two vertices, representing source and target, and it
-     * has its distance. It also provides getters and setters
-     * @Author Yuan Gao
-     * @PID A15605474
-     */
     private double distance; // the distance from source to target
     private Vertex source; // the source vertex this edge starts from
     private Vertex target; // the target vertex this edge ends at
